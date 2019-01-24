@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Creates a code directory in the users home directory (you might need to put "$(username)" in quotes)
+# Creates a Projects directory in the users home directory (you might need to put "$(username)" in quotes)
 echo "Please type in your username: \c"
 read username
 echo "The username you entered is: $username"
-mkdir -p /Users/$username/Code/Old
+mkdir -p /Users/$username/Projects/Old
 
 # Creates /Users/$username/Screenshots and changes the default folder for screenshots
 mkdir -p /Users/$username/Screenshots/
