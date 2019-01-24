@@ -1,13 +1,10 @@
 #!/bin/bash
 
 # Creates a Projects directory in the users home directory (you might need to put "$(username)" in quotes)
-echo "Please type in your username: \c"
-read username
-echo "The username you entered is: $username"
-mkdir -p /Users/$username/Projects/Old
+mkdir -p $HOME/Projects/Old
 
 # Creates /Users/$username/Screenshots and changes the default folder for screenshots
-mkdir -p /Users/$username/Screenshots/
+mkdir -p $HOME/Screenshots/
 defaults write com.apple.screencapture location /Users/$username/screenshots/ && killall SystemUIServer
 
 # Enables repeating keys by pressing and holding them down
@@ -85,6 +82,7 @@ brew cask install postman
 brew cask install slack
 brew cask install spectacle
 brew cask install spotify
+brew install vim
 brew cask install vlc
 # brew cask install pdftk
 
