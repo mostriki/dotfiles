@@ -8,7 +8,9 @@
 # Git aliases
 # ---------------------------------
 
-alias gp=git push origin `git branch -l | awk '/*/{print $2}'`
+gp () {
+    git push origin `git branch -l | awk '/*/{print $2}'`
+}
 
 # ---------------------------------
 # Kubernetes aliases

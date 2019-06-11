@@ -1,7 +1,7 @@
 
 # Variables
 dir=~/.dotfiles
-files=".zshrc .eslintrc.js .gitconfig .vimrc .hyper.js"
+files=".aliases .gitconfig .gitignore .vimrc .zshrc"
 
 echo ""
 echo "- - - - - - - - - -"
