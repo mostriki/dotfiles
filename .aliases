@@ -2,6 +2,13 @@
 # Common aliases
 # ---------------------------------
 
+[alias]
+    lg1 = log --graph --oneline --all --decorate
+    lg2 = log --graph --abbrev-commit --decorate --date=relative --format=format:‘%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)’ --all
+    lg3 = log --graph --abbrev-commit --decorate --format=format:‘%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n’'          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lg = !“git lg1”
+
+alias project_root=$( cd “$(dirname “${BASH_SOURCE[0]}“)”; cd ..; pwd -P );
 
 
 # ---------------------------------
@@ -12,6 +19,34 @@ gp () {
     git push origin `git branch -l | awk '/*/{print $2}'`
 }
 
+alias gclear="git checkout master && git fetch --prune &&git pull && git branch | grep -v '*' | xargs git branch -D"
+
+nb (){
+    if [[ -n "$1"]]
+        then
+            git checkout -b $1 && git push --set-upstream origin $1
+        else
+            echo "New branch"
+            echo "Error: missing required parameters."
+            echo "Usage:"
+            echo " nb <name>"
+    fi
+}
+
+
+
+
 # ---------------------------------
 # Kubernetes aliases
 # ---------------------------------
+
+
+setopt prompt_subst
+
+autoload -U add-zsh-hook
+
+autoload -U colors; colors
+
+source ~/linux/kubectl.zsh
+
+RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
