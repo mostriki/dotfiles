@@ -12,8 +12,16 @@ plugins=(
 )
 
 # load files
-source $ZSH/oh-my-zsh.sh
 source .aliases
+source $ZSH/oh-my-zsh.sh
+
+# zsh-kubectl-prompt
+# https://github.com/superbrothers/zsh-kubectl-prompt
+setopt prompt_subst
+autoload -U add-zsh-hook
+autoload -U colors; colors
+source ~/kubectl.zsh
+RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

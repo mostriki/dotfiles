@@ -15,11 +15,12 @@ alias project_root=$( cd “$(dirname “${BASH_SOURCE[0]}“)”; cd ..; pwd -P
 # Git aliases
 # ---------------------------------
 
+alias gclear="git checkout master && git fetch --prune &&git pull && git branch | grep -v '*' | xargs git branch -D"
+
 gp () {
     git push origin `git branch -l | awk '/*/{print $2}'`
 }
 
-alias gclear="git checkout master && git fetch --prune &&git pull && git branch | grep -v '*' | xargs git branch -D"
 
 nb (){
     if [[ -n "$1"]]
@@ -40,13 +41,4 @@ nb (){
 # Kubernetes aliases
 # ---------------------------------
 
-
-setopt prompt_subst
-
-autoload -U add-zsh-hook
-
-autoload -U colors; colors
-
-source ~/linux/kubectl.zsh
-
-RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
+alias k='kubectl'

@@ -1,7 +1,8 @@
 
+
 # Variables
 dir=~/.dotfiles
-files=".aliases .gitconfig .gitignore .vimrc .zshrc"
+files=".aliases .gitconfig .gitignore .vimrc .zshrc kubectl.zsh"
 
 echo ""
 echo "- - - - - - - - - -"
