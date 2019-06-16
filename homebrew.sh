@@ -20,7 +20,7 @@ brew doctor
 brew update
 
 # Upgrade installed formulae
-brew upgrade --all
+brew upgrade
 
 # Install cask
 brew tap caskroom/cask
@@ -44,7 +44,7 @@ git config --global core.excludesfile ~/.gitignore_global
 echo "Please type in your Git useername, ie. Rowdy McFlurry: \c"
 read gitUserName
 
-echo "The Git username you entered is: $gitUserName"
+echo "The Git username you entered is: ${gitUserName}"
 git config --global user.name $gitUserName
 
 echo "Your Git username is: "
@@ -53,7 +53,7 @@ git config --global user.name
 echo "Please type in your Git email: "
 read email
 
-echo "The Git email you entered is: $email"
+echo "The Git email you entered is: ${email}"
 git config --global user.email $email
 
 echo "Your Git email is: "
@@ -67,6 +67,12 @@ brew install ack
 brew install git-lfs
 brew install fzf
 brew install tree
+brew install zsh zsh-completions
+
+# make zsh the default shell
+chsh -s $(which zsh)
+
+echo "The default shell is echo ${SHELL}"
 
 # -----------------------------------------
 # Programming Languages and Frameworks
