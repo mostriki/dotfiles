@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+dir=~/.dotfiles
+files=".aliases .gitconfig .gitignore zsh/.zshrc"
+
+# Change to the dotfiles directory
+echo "Changing to the ${dir} directory"
+cd ${dir}
+
+# Create symlinks
+for file in $(echo $files); do
+  echo "Creating symlink to $file in home directory."
+  ln -sv ${dir}/${file} ~/${file}
+  echo "- - -"
+done
+
+# initialize new settings
+source ~/.zshrc

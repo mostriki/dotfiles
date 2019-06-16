@@ -1,0 +1,14 @@
+[color]
+        ui = true
+[user]
+        name = Riki Montgomery
+        email = 11416397+mostriki@users.noreply.github.com
+[push]
+        default = simple
+        followTags = true
+[help]
+        autocorrect = 1
+[status]
+        showUntrackedFiles = all
+[core]
+	    fileMode = false

@@ -1,0 +1,21 @@
+# ---------------------------------
+# Git functions
+# ---------------------------------
+
+alias gclear="git checkout master && git fetch --prune &&git pull && git branch | grep -v '*' | xargs git branch -D"
+
+gp () {
+    git push origin `git branch -l | awk '/*/{print $2}'`
+}
+
+nb (){
+    if [[ -n "$1"]]
+        then
+            git checkout -b $1 && git push --set-upstream origin $1
+        else
+            echo "New branch"
+            echo "Error: missing required parameters."
+            echo "Usage:"
+            echo " nb <name>"
+    fi
+}
