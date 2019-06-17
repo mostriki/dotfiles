@@ -29,5 +29,5 @@ source $ZSH/oh-my-zsh.sh
 
 
 autoload -U colors; colors
-source ~/linux/kubectl.zsh
+source ~/.dotfiles/kubectl.zsh
 RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
