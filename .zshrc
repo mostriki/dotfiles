@@ -9,6 +9,7 @@ ZSH_THEME="avit"
 # zsh standard plugins
 plugins=(
   gitfast
+  kubectl
 )
 
 # load files
@@ -25,3 +26,8 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+
+autoload -U colors; colors
+source ~/.dotfiles/kubectl.zsh
+RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
