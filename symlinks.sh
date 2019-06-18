@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 dir=~/.dotfiles
-files=".aliases .gitconfig .gitignore .zshrc"
+files=".aliases .functions .gitconfig .gitignore .zshrc"
 
 # Change to the dotfiles directory
 echo "Changing to the ${dir} directory"
