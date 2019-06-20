@@ -60,8 +60,12 @@ function _zsh_kubectl_prompt_precmd() {
     ns="$(kubectl config view -o "jsonpath={.contexts[?(@.name==\"$context\")].context.namespace}")"
     [[ -z "$ns" ]] && ns="default"
 
-    zstyle -s ':zsh-kubectl-prompt:' separator separator
-    ZSH_KUBECTL_PROMPT="${context}${separator}${ns}"
+    if [ -x "$(command -v kubectl)" ]; then
+        zstyle -s ':zsh-kubectl-prompt:' separator separator
+        ZSH_KUBECTL_PROMPT="${context}${separator}${ns}"
+        return 0
+    fi
+
 
     return 0
 }
