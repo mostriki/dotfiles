@@ -79,6 +79,7 @@ echo "The default shell is echo ${SHELL}"
 # -----------------------------------------
 
 brew install node
+brew install golang
 
 # -----------------------------------------
 # Applications and Tools
