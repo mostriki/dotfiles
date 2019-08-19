@@ -15,7 +15,7 @@ alias paths='echo -e ${PATH//:/\\n}'
 # Git aliases
 # ---------------------------------
 
-alias gclear="git checkout master && git fetch --prune &&git pull && git branch | grep -v '*' | xargs git branch -D"
+alias gclear="git checkout master && git fetch --prune && git pull && git branch | grep -v '*' | xargs git branch -D"
 
 # ---------------------------------
 # Kubernetes aliases

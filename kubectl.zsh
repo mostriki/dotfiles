@@ -26,6 +26,7 @@ function() {
 }
 
 add-zsh-hook precmd _zsh_kubectl_prompt_precmd
+
 function _zsh_kubectl_prompt_precmd() {
     local kubeconfig updated_at now context namespace ns separator modified_time_fmt
 
@@ -36,7 +37,7 @@ function _zsh_kubectl_prompt_precmd() {
 
     zstyle -s ':zsh-kubectl-prompt:' modified_time_fmt modified_time_fmt
     if ! now="$(stat -L $modified_time_fmt "$kubeconfig" 2>/dev/null)"; then
-        ZSH_KUBECTL_PROMPT="kubeconfig is not found"
+        ZSH_KUBECTL_PROMPT="..."
         return 1
     fi
 
@@ -65,7 +66,6 @@ function _zsh_kubectl_prompt_precmd() {
         ZSH_KUBECTL_PROMPT="${context}${separator}${ns}"
         return 0
     fi
-
 
     return 0
 }

@@ -3,6 +3,10 @@
 # oh-my-zsh file
 export ZSH="$HOME/.oh-my-zsh"
 
+#set GOPATH
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # zsh theme
 ZSH_THEME="avit"
 
@@ -26,7 +30,6 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 
 autoload -U colors; colors
 source ~/.dotfiles/kubectl.zsh
