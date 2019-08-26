@@ -5,7 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 #set GOPATH
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
 # zsh theme
 ZSH_THEME="avit"
