@@ -33,3 +33,8 @@ if [ -f '/Users/mostriki/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Us
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/mostriki/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mostriki/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Add pyenv init to your shell to enable shims and autocompletion
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
