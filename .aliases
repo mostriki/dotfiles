@@ -24,6 +24,12 @@ alias gclear="git checkout master && git fetch --prune && git pull && git branch
 alias k='kubectl'
 
 # ---------------------------------
+# Terraform
+# ---------------------------------
+
+alias tf='terraform'
+
+# ---------------------------------
 # Miscellaneous
 # ---------------------------------
 

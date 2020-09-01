@@ -79,6 +79,7 @@ echo "The default shell is echo ${SHELL}"
 # -----------------------------------------
 
 brew install node
+brew install typescript
 brew install golang
 
 # -----------------------------------------
@@ -93,9 +94,16 @@ brew cask install postman
 brew cask install slack
 brew cask install spectacle
 brew cask install spotify
-brew install vim
 brew cask install vlc
 # brew cask install pdftk
+
+brew install ansible
+brew install jq
+brew install packer
+brew install pyenv
+brew install terraform
+brew install terraformer
+brew install vim
 
 # -----------------------------------------
 # Quick Look Plugins
