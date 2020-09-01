@@ -28,3 +28,7 @@
         showUntrackedFiles = all
 [core]
 	    fileMode = false
+# [url "https://"]
+# 	insteadOf = git://
+# [credentials "https://source.developers.google.com"]
+# 	helper = gcloud.sh
