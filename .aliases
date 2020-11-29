@@ -9,8 +9,6 @@ alias aliases="alias | sed 's/=.*//'"
 alias functions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'"
 alias paths='echo -e ${PATH//:/\\n}'
 
-# alias project_root=$( cd “$(dirname “${BASH_SOURCE[0]}“)”; cd ..; pwd -P );
-
 # ---------------------------------
 # Git aliases
 # ---------------------------------
@@ -33,34 +31,9 @@ alias tf='terraform'
 # Miscellaneous
 # ---------------------------------
 
-alias week="date +%V"
+alias gclear="git checkout master && git fetch --prune &&git pull && git branch | grep -v '*' | xargs git branch -D"
+alias mkdir='mkdir -pv' # make any necessary parent directories, show verbose output
+alias mv="mv -iv" # interactive and verbose
+alias rm="rm -iv" # interactive and verbose
 alias shutdown="sudo shutdown -h now"
-# alias aliases='vim ~/.bash_aliases && . ~/.bash_aliases'
-# alias so='source ~/.bashrc'
-
-#Process related
-#alias top="btm -af"
-#alias ps="ps auxf" # # show all processes, display user-oriented format, show processes that aren't attached to ttys, use full-format listing
-#alias pse="\ps -e --forest" # list processes as a tree
-#alias psg="\ps aux | grep -v grep | grep -i -e VSZ -e" # search for a running process. example: psg firefox
-#alias psr="\ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head" # list top 10 cpu-intensive processes
-#alias pst="\ps -eo pid,comm,lstart,etimes,time,args"
-
-#coreutils and grep:
-#alias find="fd -a -j4" # use fd instead of find, show absolute paths, use 4 threads
-#alias grep="rg -i --color=auto" # use ripgrep instead of grep, ignore case differences and automatically use color
-#alias ls="ls -Fa --color=auto" # append indicators to filenames, show all files, automatically use color
-#alias cat="bat -p" # use bat instead of cat, use plain output
-#alias mkdir='mkdir -pv' # make any necessary parent directories, show verbose output
-#alias mv="mv -iv" # interactive and verbose
-#alias cp="xcp -vw 4" # use xcp instead of cp, verbose, use 4 workers
-#alias rm="rm -iv" # interactive and verbose
-
-#    open () {
-#         xdg-open "$@" &>/dev/null
-#     }
-
-# mkcd () {
-#     mkdir -p "$1";
-#     cd "$1"
-#  }
+alias week="date +%V"

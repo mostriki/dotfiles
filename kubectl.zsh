@@ -1,5 +1,3 @@
-# clone from https://github.com/superbrothers/zsh-kubectl-prompt
-
 setopt prompt_subst
 autoload -U add-zsh-hook
 

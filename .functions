@@ -2,4 +2,7 @@
 # Git functions
 # ---------------------------------
 
-alias gclear="git checkout master && git fetch --prune &&git pull && git branch | grep -v '*' | xargs git branch -D"
+mkcd () {
+    mkdir -p "$1";
+    cd "$1"
+}

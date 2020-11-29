@@ -86,49 +86,47 @@ brew install golang
 # Applications and Tools
 # -----------------------------------------
 
-brew cask install docker
-brew cask install dropbox
-brew cask install google-chrome
-brew cask install iterm2
-brew cask install postman
-brew cask install slack
-brew cask install spectacle
-brew cask install spotify
-brew cask install vlc
-# brew cask install pdftk
+brew install --cask docker
+brew install --cask dropbox
+brew install --cask google-chrome
+brew install --cask iterm2
+brew install --cask postman
+brew install --cask spectacle
+brew install --cask spotify
+brew install --cask vlc
+brew install --cask pdftk
 
 brew install ansible
+brew install helm
 brew install jq
+brew install kustomize
 brew install packer
 brew install pyenv
 brew install terraform
-brew install terraformer
 brew install vim
 
 # -----------------------------------------
-# Quick Look Plugins
+# QuickLook Plugins
 # -----------------------------------------
 
-brew cask install qlcolorcode
-brew cask install qlimagesize
-brew cask install qlmarkdown
-brew cask install qlstephen
-brew cask install qlvideo
-brew cask install quicklookase
-brew cask install quicklook-csv
-brew cask install quicklook-json
-brew cask install suspicious-package
-brew cask install webpquicklook
+brew install --cask qlcolorcode
+brew install --cask qlimagesize
+brew install --cask qlmarkdown
+brew install --cask qlstephen
+brew install --cask qlvideo
+brew install --cask quicklook-csv
+brew install --cask quicklook-json
+brew install --cask suspicious-package
 
 # -----------------------------------------
 # Productivity and Utility Applications
 # -----------------------------------------
 
-brew cask install android-file-transfer
-brew cask install appcleaner
-brew cask install coconutbattery
-brew cask install little-snitch
-brew cask install the-unarchiver
+brew install --cask android-file-transfer
+brew install --cask appcleaner
+brew install --cask coconutbattery
+brew install --cask little-snitch
+brew install --cask the-unarchiver
 
 # -----------------------------------------
 # Misc
