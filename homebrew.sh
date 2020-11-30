@@ -60,6 +60,21 @@ echo "Your Git email is: "
 git config --global user.email
 
 # -----------------------------------------
+# ZSH Plugins
+# -----------------------------------------
+
+brew install zsh zsh-completions
+
+# make zsh the default shell
+chsh -s $(which zsh)
+
+echo "The default shell is echo ${SHELL}"
+
+echo "Installing zsh plugins"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone git@github.com:superbrothers/zsh-kubectl-prompt.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-kubectl-prompt
+
+# -----------------------------------------
 # Command-line Tools
 # -----------------------------------------
 
@@ -67,12 +82,6 @@ brew install ack
 brew install git-lfs
 brew install fzf
 brew install tree
-brew install zsh zsh-completions
-
-# make zsh the default shell
-chsh -s $(which zsh)
-
-echo "The default shell is echo ${SHELL}"
 
 # -----------------------------------------
 # Programming Languages and Frameworks

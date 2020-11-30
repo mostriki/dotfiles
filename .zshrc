@@ -14,6 +14,10 @@ ZSH_THEME="avit"
 plugins=(
   gitfast
   kubectl
+  node
+  npm
+  zsh-autosuggestions
+  zsh-kubectl-prompt
 )
 
 # load files
@@ -22,7 +26,7 @@ source .functions
 source $ZSH/oh-my-zsh.sh
 
 autoload -U colors; colors
-source ~/.dotfiles/kubectl.zsh
+# source ~/.dotfiles/kubectl.zsh
 RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 
 # The next line updates PATH for the Google Cloud SDK.
