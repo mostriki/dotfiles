@@ -7,18 +7,14 @@ export ZSH="$HOME/.oh-my-zsh"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# zsh theme
-# ZSH_THEME="avit"
-ZSH_THEME="avit2"
+ZSH_THEME="avit-custom"
 
-# zsh standard plugins
 plugins=(
   gitfast
   kubectl
   node
   npm
   zsh-autosuggestions
-#   zsh-kubectl-prompt
 )
 
 # load files

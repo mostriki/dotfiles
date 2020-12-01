@@ -74,6 +74,9 @@ echo "Installing zsh plugins"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone git@github.com:superbrothers/zsh-kubectl-prompt.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-kubectl-prompt
 
+# copy customized avit zsh theme to zsh custom themes dir
+cp ~/.dotfiles/avit-custom.zsh-theme ~/.oh-my-zsh/custom/themes/avit-custom.zsh-theme
+
 # -----------------------------------------
 # Command-line Tools
 # -----------------------------------------
