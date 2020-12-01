@@ -1,7 +1,7 @@
-# AVIT ZSH Theme
+# Custom AVIT ZSH Theme
 
 PROMPT='
-$(_user_host)${_current_dir} $(git_prompt_info) $(_ruby_version)
+$(_user_host)${_current_dir}$(_zsh_kubectl_prompt)$(git_prompt_info)
 %{$fg[$CARETCOLOR]%}▶%{$resetcolor%} '
 
 PROMPT2='%{$fg[$CARETCOLOR]%}◀%{$reset_color%} '
@@ -38,12 +38,48 @@ function _vi_status() {
   fi
 }
 
-function _ruby_version() {
-  if {echo $fpath | grep -q "plugins/rvm"}; then
-    echo "%{$fg[grey]%}$(rvm_prompt_info)%{$reset_color%}"
-  elif {echo $fpath | grep -q "plugins/rbenv"}; then
-    echo "%{$fg[grey]%}$(rbenv_prompt_info)%{$reset_color%}"
-  fi
+function _zsh_kubectl_prompt() {
+    local kubeconfig config updated_at now context ns modified_time_fmt
+
+    kubeconfig="$HOME/.kube/config"
+    if [[ -n "$KUBECONFIG" ]]; then
+        kubeconfig="$KUBECONFIG"
+    fi
+
+    if [[ -z "$modified_time_fmt" ]]; then
+      # Check the stat command because it has a different syntax between GNU coreutils and FreeBSD.
+      if stat --help >/dev/null 2>&1; then
+          modified_time_fmt='-c%y' # GNU coreutils
+      else
+          modified_time_fmt='-f%m' # FreeBSD
+      fi
+    fi
+
+    # KUBECONFIG environment variable can hold a list of kubeconfig files that is colon-delimited.
+    # Therefore, if KUBECONFIG has been held multiple files, each files need to be checked.
+    while read -d ":" config; do
+        if ! now="${now}$(stat -L $modified_time_fmt "$config" 2>/dev/null)"; then
+            ZSH_KUBECTL_PROMPT="$config doesn't exist"
+            return 1
+        fi
+    done <<< "${kubeconfig}:"
+
+    if [[ "$updated_at" == "$now" ]]; then
+        return 0
+    fi
+
+    # Set environment variable if context is not set
+    if ! context="$(kubectl config current-context 2>/dev/null)"; then
+        ZSH_KUBECTL_PROMPT="current-context is not set"
+        return 1
+    fi
+
+    ns="$(kubectl config view -o "jsonpath={.contexts[?(@.name==\"$context\")].context.namespace}")"
+    [[ -z "$ns" ]] && ns="default"
+    ZSH_KUBECTL_NAMESPACE="${ns}"
+    ZSH_KUBECTL_PROMPT="${context}/${ns}"
+
+    echo "%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%} "
 }
 
 # Determine the time since last commit. If branch is clean,

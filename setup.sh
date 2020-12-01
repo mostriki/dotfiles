@@ -2,11 +2,12 @@
 
 init () {
     # Create Projects directory in HOME (you might need to put "$(username)" in quotes)
-    mkdir -p $HOME/Projects/Old
+    mkdir -p $HOME/Projects/
+    mkdir -p $HOME/Playground/
 
     # Creates /Users/$username/Screenshots and changes the default folder for screenshots
-    mkdir -p $HOME/Screenshots/
-    defaults write com.apple.screencapture location /Users/$username/screenshots/ && killall SystemUIServer
+    mkdir -p $HOME/Snaps/
+    defaults write com.apple.screencapture location /Users/$username/Snaps/ && killall SystemUIServer
 
     # Enables repeating keys by pressing and holding them down
     defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
