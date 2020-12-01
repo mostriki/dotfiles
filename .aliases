@@ -21,7 +21,7 @@ alias gclear="git checkout master && git fetch --prune && git pull && git branch
 
 alias k='kubectl'
 # alias to switch between namespace
-# Usage: kcns--namespace=<insert-namespace-name-here>
+# Usage: kcns --namespace=<insert-namespace-name-here>
 alias kcns='kubectl config set-context --current'
 
 # alias to validate the namespace
