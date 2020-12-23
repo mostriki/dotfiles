@@ -124,7 +124,6 @@ brew install vim
 brew install --cask qlcolorcode
 brew install --cask qlimagesize
 brew install --cask qlmarkdown
-brew install --cask qlstephen
 brew install --cask qlvideo
 brew install --cask quicklook-csv
 brew install --cask quicklook-json
