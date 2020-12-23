@@ -10,6 +10,7 @@ export PATH=$PATH:$GOPATH/bin
 ZSH_THEME="avit-custom"
 
 plugins=(
+  gcloud
   gitfast
   kubectl
   node
@@ -21,12 +22,6 @@ plugins=(
 source .aliases
 source .functions
 source $ZSH/oh-my-zsh.sh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/mostriki/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mostriki/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/mostriki/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mostriki/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Add pyenv init to your shell to enable shims and autocompletion
 if command -v pyenv 1>/dev/null 2>&1; then
