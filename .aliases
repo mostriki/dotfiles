@@ -2,12 +2,17 @@
 # Common aliases
 # ---------------------------------
 
-alias rr="rm -rf"
-alias ws="webstorm ."
-
 alias aliases="alias | sed 's/=.*//'"
 alias functions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'"
+alias mkdir='mkdir -pv' # make any necessary parent directories, show verbose output
+alias mv="mv -iv" # interactive and verbose
 alias paths='echo -e ${PATH//:/\\n}'
+alias pycharm="open -na 'Pycharm.app' --args "$@"
+alias rr="rm -rf"
+alias rm="rm -iv" # interactive and verbose
+alias shutdown="sudo shutdown -h now"
+alias week="date +%V"
+alias ws="webstorm ."
 
 # ---------------------------------
 # Git aliases
@@ -32,14 +37,3 @@ alias knc='kubectl config view --minify | grep namespace:'
 # ---------------------------------
 
 alias tf='terraform'
-
-# ---------------------------------
-# Miscellaneous
-# ---------------------------------
-
-alias gclear="git checkout master && git fetch --prune &&git pull && git branch | grep -v '*' | xargs git branch -D"
-alias mkdir='mkdir -pv' # make any necessary parent directories, show verbose output
-alias mv="mv -iv" # interactive and verbose
-alias rm="rm -iv" # interactive and verbose
-alias shutdown="sudo shutdown -h now"
-alias week="date +%V"
