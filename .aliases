@@ -18,7 +18,7 @@ alias ws="webstorm ."
 # Git aliases
 # ---------------------------------
 
-alias gclear2="git checkout master && git fetch --prune && git pull && git branch | grep -v '*' | xargs git branch -D"
+alias gclean="git checkout master && git fetch --prune && git pull && git branch | grep -v '*' | xargs git branch -D"
 
 # ---------------------------------
 # Kubernetes aliases
