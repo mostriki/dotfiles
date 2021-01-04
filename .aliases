@@ -4,6 +4,7 @@
 
 alias aliases="alias | sed 's/=.*//'"
 alias functions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'"
+alias jsn='python3 -m json.tool'
 alias mkdir='mkdir -pv' # make any necessary parent directories, show verbose output
 alias mv="mv -iv" # interactive and verbose
 alias paths='echo -e ${PATH//:/\\n}'
