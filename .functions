@@ -6,3 +6,24 @@ mkcd () {
     mkdir -p "$1";
     cd "$1"
 }
+
+# ---------------------------------
+# Debugger Pod
+# ---------------------------------
+
+# Image retrieval helper to latest is grabbed
+# gcr_get_latest_sha () {
+#     gcloud container images list-tags gcr.io/<project>/kdebugger --format=json | jq -r '.[0].digest'
+# }
+
+# Debug continer
+# kdebug () {
+#     k_dep_name=$(echo `whoami` | awk '{print tolower($0)}')-debugger
+#
+#     if kubectl get deployment $k_dep_name
+#     then
+#         kubectl attach $(k get pods | grep $k_dep_name | cut -d ' ' -f 1) -i -t
+#     else
+#         kubectl run -it --image=gcr.io/<project>/kdebugger@$(gcr_get_latest_sha kdebugger) $k_dep_name /bin/bash
+#     fi
+# }

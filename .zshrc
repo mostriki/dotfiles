@@ -8,6 +8,7 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 ZSH_THEME="avit-custom"
+export CLOUDSDK_HOME="${HOME}/google-cloud-sdk"
 
 plugins=(
   gcloud
@@ -29,6 +30,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # Updates PATH for the Google Cloud SDK if the plugin doesn't work
-source ${HOME}/google-cloud-sdk/path.zsh.inc
+# source ${HOME}/google-cloud-sdk/path.zsh.inc
 # Enables bash completion for gcloud if the plugin doesn't work
-source ${HOME}/google-cloud-sdk/completion.zsh.inc
+# source ${HOME}/google-cloud-sdk/completion.zsh.inc
