@@ -1,19 +1,19 @@
 # Dotfiles
 
+## How to setup your dotfiles on a new laptop
+- Inspect each file and customize as you see fit
+- Run `.setup.sh` from the root of the `.dotfiles` folder
+- Follow the prompts
+
+## How to update your dotfiles after initial setup
+- Edit any of the `.aliases` `.functions` `.gitconfig` `.gitignore` and `.zshrc` files
+- Run `./symlinks` from the root of the `.dotfiles` folder
+- Run `source ~/.zshrc` to reload your zsh settings
+
 ## Fix user name and email in .gitconfig
 Update the user name and email in the .gitconfig file before running `./symlinks`
 
-## Move custom zsh theme
-The `avit-custom.zsh-theme` is a custom theme that displays your current kubernetes context and namespace in the `PROMPT`. Move this file to the custom theme directory, if you want to use it.   
-`$ cp /User/<name>/.oh-my-zsh/custom/theme/avit-custom.zsh-theme`
-
-## Install Symlinks
-Run `./symlinks`
-
-## Install on new laptop
-Run `.setup.sh`
-
-### Helpful Key Combos
+### Helpful ZSH Shortcuts
 - `Ctrl + U` – delete from the cursor to the start of the line.
 - `Ctrl + K` – delete from the cursor to the end of the line.
 - `Ctrl + W` – delete from the cursor to the start of the preceding word.
