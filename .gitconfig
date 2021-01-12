@@ -1,8 +1,5 @@
 [color]
         ui = true
-#[user]
-#        name = Riki Montgomery
-#        email = 11416397+mostriki@users.noreply.github.com
 
 [alias]
         lg = log --stat --pretty=short --graph
