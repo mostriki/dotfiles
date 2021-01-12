@@ -28,8 +28,3 @@ source $ZSH/oh-my-zsh.sh
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-
-# Updates PATH for the Google Cloud SDK if the plugin doesn't work
-# source ${HOME}/google-cloud-sdk/path.zsh.inc
-# Enables bash completion for gcloud if the plugin doesn't work
-# source ${HOME}/google-cloud-sdk/completion.zsh.inc
