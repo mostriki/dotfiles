@@ -2,13 +2,13 @@
 
 # oh-my-zsh file
 export ZSH="$HOME/.oh-my-zsh"
+export CLOUDSDK_HOME="${HOME}/google-cloud-sdk"
 
 #set GOPATH
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 ZSH_THEME="avit-custom"
-export CLOUDSDK_HOME="${HOME}/google-cloud-sdk"
 
 plugins=(
   gcloud

@@ -67,13 +67,11 @@ brew install --cask iterm2
 
 brew install zsh zsh-completions
 
-# make zsh the default shell
-chsh -s $(which zsh)
-
-echo "The default shell is echo ${SHELL}"
-
 # Install Oh My Zsh
-$ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+chsh -s $(which zsh)
+echo "The default shell is echo ${SHELL}"
 
 echo "Installing zsh plugins"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -82,7 +80,7 @@ git clone git@github.com:superbrothers/zsh-kubectl-prompt.git ${ZSH_CUSTOM:-~/.o
 # copy customized avit zsh theme to zsh custom themes dir
 cp ~/.dotfiles/avit-custom.zsh-theme ~/.oh-my-zsh/custom/themes/avit-custom.zsh-theme
 
-upgrade_oh_my_zsh
+omz update
 
 # -----------------------------------------
 # Command-line Tools
