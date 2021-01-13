@@ -80,7 +80,7 @@ git clone git@github.com:superbrothers/zsh-kubectl-prompt.git ${ZSH_CUSTOM:-~/.o
 # copy customized avit zsh theme to zsh custom themes dir
 cp ~/.dotfiles/avit-custom.zsh-theme ~/.oh-my-zsh/custom/themes/avit-custom.zsh-theme
 
-omz update
+upgrade_oh_my_zsh
 
 # -----------------------------------------
 # Command-line Tools
