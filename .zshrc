@@ -3,7 +3,7 @@ export ZSH="/Users/$(whoami)/.oh-my-zsh"
 
 # set PATH
 export GOPATH=$HOME/go
-export PATH=$HOME/bin:/usr/local/bin:$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin
 
 ZSH_THEME="avit-custom"
 
