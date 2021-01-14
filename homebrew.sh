@@ -102,6 +102,7 @@ brew install --cask vlc
 brew install --cask pdftk
 
 brew install ansible
+brew install k9s
 brew install helm
 brew install jq
 brew install kustomize

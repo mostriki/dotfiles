@@ -10,10 +10,9 @@ ZSH_THEME="avit"
 
 plugins=(
 #   gcloud
-  gitfast
+  git
   kubectl
   node
-  npm
   zsh-autosuggestions
   zsh-completions
   zsh-kubectl-prompt
