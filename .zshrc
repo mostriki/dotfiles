@@ -1,11 +1,9 @@
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 export ZSH="/Users/$(whoami)/.oh-my-zsh"
 # export CLOUDSDK_HOME="${HOME}/google-cloud-sdk"
 
-#set GOPATH
+# set PATH
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$HOME/bin:/usr/local/bin:$PATH:$GOPATH/bin
 
 ZSH_THEME="avit-custom"
 
@@ -20,7 +18,6 @@ plugins=(
 )
 
 autoload -U compinit && compinit
-
 
 # load files
 source .aliases
