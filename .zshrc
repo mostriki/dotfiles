@@ -1,3 +1,4 @@
+export PATH="/usr/local/bin:/bin:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 # export CLOUDSDK_HOME="${HOME}/google-cloud-sdk"
 
@@ -5,7 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-ZSH_THEME="avit-custom"
+ZSH_THEME="avit"
 
 plugins=(
 #   gcloud
@@ -15,6 +16,7 @@ plugins=(
   npm
   zsh-autosuggestions
   zsh-completions
+  zsh-kubectl-prompt
 )
 
 autoload -U compinit && compinit
