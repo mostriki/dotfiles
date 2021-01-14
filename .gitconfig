@@ -24,7 +24,7 @@
 [status]
         showUntrackedFiles = all
 [core]
-	fileMode = false
+	    fileMode = false
 
 # Allows Git to connect securely to Cloud Source Repositories using Google Account credentials
 # [credentials "https://source.developers.google.com"]
