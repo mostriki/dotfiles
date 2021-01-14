@@ -4,7 +4,7 @@ PROMPT='
 $(_user_host)${_current_dir}$(_zsh_kubectl_prompt)$(git_prompt_info)
 %{$fg[$CARETCOLOR]%}▶%{$resetcolor%} '
 
-PROMPT2='%{$fg[$CARETCOLOR]%}◀%{$reset_color%} '
+PROMPT2='%{$fg[$CARETCOLOR]%}◀%{$reset_col$ZSH_KUBECTL_PROMPTor%} '
 
 RPROMPT='$(_vi_status)%{$(echotc UP 1)%}$(_git_time_since_commit) $(git_prompt_status) ${_return_status}%{$(echotc DO 1)%}'
 

@@ -4,6 +4,7 @@
 - Inspect each file and customize as you see fit
 - Run `.setup.sh` from the root of the `.dotfiles` folder
 - Follow the prompts
+- Run `source ~/.zshrc` to reload your zsh settings when it's finished
 
 ## How to update your dotfiles after initial setup
 - Edit any of the `.aliases` `.functions` `.gitconfig` `.gitignore` and `.zshrc` files

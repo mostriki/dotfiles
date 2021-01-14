@@ -13,6 +13,3 @@ for file in $(echo $files); do
   ln -sfv ${dir}/${file} ~/${file}
   echo "- - -"
 done
-
-# initialize new settings
-source ~/.zshrc
