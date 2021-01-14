@@ -1,8 +1,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# oh-my-zsh file
-export ZSH="$HOME/.oh-my-zsh"
-export CLOUDSDK_HOME="${HOME}/google-cloud-sdk"
+export ZSH="/Users/$(whoami)/.oh-my-zsh"
+# export CLOUDSDK_HOME="${HOME}/google-cloud-sdk"
 
 #set GOPATH
 export GOPATH=$HOME/go
@@ -11,13 +10,17 @@ export PATH=$PATH:$GOPATH/bin
 ZSH_THEME="avit-custom"
 
 plugins=(
-  gcloud
+#   gcloud
   gitfast
   kubectl
   node
   npm
   zsh-autosuggestions
+  zsh-completions
 )
+
+autoload -U compinit && compinit
+
 
 # load files
 source .aliases
