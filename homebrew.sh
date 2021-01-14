@@ -7,6 +7,8 @@ if ! type brew > /dev/null 2 > /dev/null
     then
         echo "Installing Homebrew..."
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        
+        echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
      else
         echo "Something went wrong. Exiting..." && exit 1
 fi
