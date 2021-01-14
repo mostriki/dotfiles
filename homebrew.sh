@@ -6,9 +6,7 @@ echo '\n'
 if ! type brew > /dev/null 2 > /dev/null
     then
         echo "Installing Homebrew..."
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-        echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
      else
         echo "Something went wrong. Exiting..." && exit 1
 fi
@@ -76,13 +74,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Update Oh My Zsh
 omz update
 
-echo "Installing zsh plugins"
+echo "Installing custom ZSH plugins and themes"
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone git@github.com:superbrothers/zsh-kubectl-prompt.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-kubectl-prompt
-
-# copy customized avit zsh theme to zsh custom themes dir
-cp ~/.dotfiles/avit-custom.zsh-theme ~/.oh-my-zsh/custom/themes/avit-custom.zsh-theme
+cp ~/.dotfiles/avit-custom.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/avit-custom.zsh-theme
 
 # -----------------------------------------
 # Command-line Tools
