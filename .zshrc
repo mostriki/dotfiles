@@ -1,4 +1,4 @@
-export ZSH="/Users/$(whoami)/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 # export CLOUDSDK_HOME="${HOME}/google-cloud-sdk"
 
 # set PATH
