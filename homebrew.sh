@@ -34,13 +34,6 @@ brew install coreutils
 
 brew install git
 
-# Color code Git information in the terminal 
-git config --global color.ui true
-
-# Install and tell git to use the github recommended .gitignore for macOS
-curl https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.gitignore -o ~/.gitignore
-git config --global core.excludesfile ~/.gitignore_global
-
 echo "Please type in your Git useername, ie. Rowdy McFlurry: \c"
 read gitUserName
 
