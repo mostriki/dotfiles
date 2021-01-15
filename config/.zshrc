@@ -18,8 +18,8 @@ plugins=(
 )
 
 # load files
-source .aliases
-source .functions
+source ./config/.aliases
+source ./config/.functions
 source $ZSH/oh-my-zsh.sh
 source /Users/$(whoami)/.oh-my-zsh/custom/plugins/zsh-kubectl-prompt/kubectl.zsh
 
