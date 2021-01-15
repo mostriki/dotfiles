@@ -5,11 +5,11 @@ files=".aliases .functions .gitconfig .gitignore .zshrc"
 
 # Change to the dotfiles directory
 echo "Changing to the ${dir} directory"
-cd ${dir}
+cd ${dir} || exit
 
 # Create symlinks
-for file in $(echo $files); do
+for file in $files; do
   echo "Creating symlink to $file in home directory."
-  ln -sfv ${dir}/${file} ~/${file}
-  echo "- - -"
+  ln -sfv ${dir}/"${file}" ~/"${file}"
+  echo "- -"
 done

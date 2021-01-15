@@ -21,9 +21,11 @@ plugins=(
 source .aliases
 source .functions
 source $ZSH/oh-my-zsh.sh
+source /Users/$(whoami)/.oh-my-zsh/custom/plugins/zsh-kubectl-prompt/kubectl.zsh
 
-# source /Users/$(whoami)/.oh-my-zsh/custom/plugins/zsh-kubectl-prompt/kubectl.zsh
-# RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
+PROMPT='
+$(_user_host)${_current_dir}%{$fg_bold[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%} $(git_prompt_info) $(ruby_prompt_info)
+%{%(!.${fg[red]}.${fg[white]})%}▶%{$reset_color%} '
 
 # Add pyenv init to your shell to enable shims and autocompletion
 if command -v pyenv 1>/dev/null 2>&1; then
