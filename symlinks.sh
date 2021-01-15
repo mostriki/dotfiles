@@ -10,6 +10,6 @@ cd ${dir} || exit
 # Create symlinks
 for file in $files; do
   echo "Creating symlink to $file in home directory."
-  ln -sfv ${dir}/config/"${file}" ~/"${file}"
+  ln -sfv ${dir}/"${file}" ~/"${file}"
   echo "- -"
 done
