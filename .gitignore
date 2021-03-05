@@ -7,7 +7,6 @@ Desktop.ini
 # Icon must end with two \r
 Icon
 
-
 # Thumbnail cache files
 ._*
 Thumbs.db
@@ -40,4 +39,4 @@ node_modules
 .sass-cache
 
 #JetBrains
-../.idea
+.idea
