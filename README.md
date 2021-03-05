@@ -13,3 +13,6 @@
 
 ## Fix user name and email in .gitconfig
 Update the user name and email in the .gitconfig file before running `./symlinks`
+
+### TO DO
+- Uncomment #GRUB_DISABLE_RECOVERY="true" in /etc/default/grub and run sudo update-grub afterwards to disable recovery mode.
