@@ -4,34 +4,29 @@
 
 alias aliases="alias | sed 's/=.*//'"
 alias functions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'"
-alias jsn='python3 -m json.tool'
 alias mkdir='mkdir -pv' # make any necessary parent directories, show verbose output
 alias mv="mv -iv" # interactive and verbose
 alias paths='echo -e ${PATH//:/\\n}'
-alias pycharm="open -na 'Pycharm.app' --args '$@'"
 alias rr="rm -rf"
 alias rm="rm -iv" # interactive and verbose
 alias shutdown="sudo shutdown -h now"
 alias week="date +%V"
-alias ws="webstorm ."
 
 # ---------------------------------
 # Git aliases
 # ---------------------------------
 
 alias gclear="git checkout master && git fetch --prune && git pull && git branch | grep -v '*' | xargs git branch -D"
+alias gmclear="git checkout main && git fetch --prune && git pull && git branch | grep -v '*' | xargs git branch -D"
 
 # ---------------------------------
-# Kubernetes aliases
+# JetBrains
 # ---------------------------------
 
-alias k='kubectl'
-# alias to switch between namespace
-# Usage: kcns --namespace=<insert-namespace-name-here>
-alias kcns='kubectl config set-context --current'
-
-# alias to validate the namespace
-alias knc='kubectl config view --minify | grep namespace:'
+alias goland="open -na 'GoLand.app' --args '$@'"
+alias pycharm="open -na 'Pycharm.app' --args '$@'"
+alias rider="open -na 'JetBrains Rider.app' --args '$@'"
+alias webstorm="open -na 'WebStorm.app' --args '$@'"
 
 # ---------------------------------
 # Terraform

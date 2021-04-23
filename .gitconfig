@@ -1,6 +1,10 @@
 [color]
         ui = true
 
+[user]
+	name = Riki Montgomery
+	email = 39775174+riki-orange@users.noreply.github.com
+
 [alias]
         lg = log --stat --pretty=short --graph
         lg1 = log --graph --oneline --all --decorate
@@ -27,8 +31,3 @@
 
 [core]
 	    fileMode = false
-
-# Allows Git to connect securely to Cloud Source Repositories using Google Account credentials
-# [credentials "https://source.developers.google.com"]
-# 	helper = gcloud.sh
-
