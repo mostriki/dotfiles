@@ -16,3 +16,5 @@ Update the user name and email in the .gitconfig file before running `./symlinks
 
 ### TO DO
 - Uncomment #GRUB_DISABLE_RECOVERY="true" in /etc/default/grub and run sudo update-grub afterwards to disable recovery mode.
+- https://stackoverflow.com/questions/4220416/can-i-specify-multiple-users-for-myself-in-gitconfig
+- https://gist.github.com/oanhnn/80a89405ab9023894df7

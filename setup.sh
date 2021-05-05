@@ -23,7 +23,7 @@ init () {
 		return 1
 	fi
 }
-# https://gist.github.com/oanhnn/80a89405ab9023894df7
+
 #create_ssh_keys () {
 #  SSH_FILE="${HOME}/.ssh"
 #  SSH_CONFIG="${HOME}/.ssh/config/"

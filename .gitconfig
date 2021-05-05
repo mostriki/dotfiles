@@ -3,7 +3,10 @@
 
 [user]
 	name = Riki Montgomery
-	email = 39775174+riki-orange@users.noreply.github.com
+	email = 11416397+mostriki@users.noreply.github.com
+
+[includeIf "gitdir:~/.dotfiles/work/"]
+    path = ~/.dotfiles/work/.gitconfig
 
 [alias]
         lg = log --stat --pretty=short --graph
